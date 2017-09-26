@@ -34,7 +34,7 @@ class User extends Entry implements Authenticatable
      */
     public function getAuthIdentifier()
     {
-        return $this->getConvertedSid();
+        return $this->getFirstAttribute($this->schema->userId());
     }
 
     /**

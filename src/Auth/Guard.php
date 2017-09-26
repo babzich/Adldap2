@@ -32,7 +32,7 @@ class Guard implements GuardInterface
     public function attempt($username, $password, $bindAsUser = false)
     {
         $this->validateCredentials($username, $password);
-
+        
         try {
             $this->bind($username, $password);
         } catch (BindException $e) {
